@@ -18,8 +18,8 @@ module.exports = (pageParams) => `<!DOCTYPE html>
   <link rel="stylesheet" id="challenge-css" href="/style.css?ver=${pageParams.npmPackageVersion}" type="text/css" media="all">
 </head>
 <body>
-  <main class="js-app">
-  Loading application version ${pageParams.npmPackageVersion}
+  <main id="App">
+    Loading application version ${pageParams.npmPackageVersion}
   </main>
   <script src="/app.js?ver=${pageParams.npmPackageVersion}"></script>
 </body>

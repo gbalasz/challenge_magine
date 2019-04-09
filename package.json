@@ -1,13 +1,14 @@
 {
   "name": "challenge_magine",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Challenge Magine",
   "main": "src/index.js",
   "dependencies": {
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
-    "graphql": "^14.2.1"
+    "graphql": "^14.2.1",
+    "redux": "^4.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -35,6 +36,11 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "prettier-eslint": "^8.8.2",
     "prettier-stylelint": "^0.4.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
