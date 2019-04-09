@@ -1,14 +1,14 @@
 import React from 'react'
+import { MainNav, PageHeader } from './components'
 // import { connect } from 'react-redux'
 // import { stores } from './stores'
 
 class App extends React.Component {
   render () {
     return <div className="wrapper">
-      <header>
-        <h1>Gabi Balasz - Challenge for Magine</h1>
-      </header>
+      <PageHeader title="Gabi Balasz - Challenge for Magine" />
       <section className="container">
+        <MainNav />
         {this.renderNavigation()}
       </section>
       <footer></footer>

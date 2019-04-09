@@ -642,7 +642,43 @@ eval("module.exports = function(originalModule) {\n\tif (!originalModule.webpack
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n// import { connect } from 'react-redux'\n// import { stores } from './stores'\n\nclass App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", { className: \"wrapper\" }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"header\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h1\", null, \"Gabi Balasz - Challenge for Magine\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"section\", { className: \"container\" }, this.renderNavigation()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"footer\", null));\n  }\n\n  renderNavigation() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"nav\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"a\", { href: \"javascript:void(0);\" }, \"Link\"));\n  }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n//# sourceURL=webpack:///./src/App.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components */ \"./src/components/index.js\");\n\n\n// import { connect } from 'react-redux'\n// import { stores } from './stores'\n\nclass App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement('div', { className: 'wrapper' }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__[\"PageHeader\"], { title: 'Gabi Balasz - Challenge for Magine' }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement('section', { className: 'container' }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__[\"MainNav\"], null), this.renderNavigation()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement('footer', null));\n  }\n\n  renderNavigation() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement('nav', null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement('a', { href: 'javascript:void(0);' }, 'Link'));\n  }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n//# sourceURL=webpack:///./src/App.js?");
+
+/***/ }),
+
+/***/ "./src/components/index.js":
+/*!*********************************!*\
+  !*** ./src/components/index.js ***!
+  \*********************************/
+/*! exports provided: MainNav, PageHeader */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_nav_MainNav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main-nav/MainNav */ \"./src/components/main-nav/MainNav.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MainNav\", function() { return _main_nav_MainNav__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n/* harmony import */ var _page_header_PageHeader_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./page-header/PageHeader.jsx */ \"./src/components/page-header/PageHeader.jsx\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"PageHeader\", function() { return _page_header_PageHeader_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"]; });\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/components/index.js?");
+
+/***/ }),
+
+/***/ "./src/components/main-nav/MainNav.js":
+/*!********************************************!*\
+  !*** ./src/components/main-nav/MainNav.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nclass MainNav extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"nav\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"a\", { href: \"javascript:void(0);\" }, \"Link\"));\n  }\n\n  componentDidMount() {}\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MainNav);\n\n//# sourceURL=webpack:///./src/components/main-nav/MainNav.js?");
+
+/***/ }),
+
+/***/ "./src/components/page-header/PageHeader.jsx":
+/*!***************************************************!*\
+  !*** ./src/components/page-header/PageHeader.jsx ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (props => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n  \"header\",\n  null,\n  react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n    \"h1\",\n    { className: \"text--center\" },\n    props.title\n  )\n));\n\n//# sourceURL=webpack:///./src/components/page-header/PageHeader.jsx?");
 
 /***/ }),
 
