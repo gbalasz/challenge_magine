@@ -20,8 +20,12 @@ staticFiles.forEach((file) => {
   })
 })
 
-app.get('/style.min.css', (req, res) => {
-  res.sendFile('dist/css/style.css', { root: path.join(__dirname, '../') })
+app.get('/style.css', (req, res) => {
+  res.sendFile('dist/style.bundle.css', { root: path.join(__dirname, '../') })
+})
+
+app.get('/app.js', (req, res) => {
+  res.sendFile('dist/app.bundle.js', { root: path.join(__dirname, '../') })
 })
 
 if (require.main === module) {

@@ -15,11 +15,12 @@ module.exports = (pageParams) => `<!DOCTYPE html>
   <link rel="shortcut icon" href="https://www.maginepro.com/wp-content/uploads/2018/01/cropped-favicon_maginepro_512x512-192x192.png">
   <link rel="apple-touch-icon-precomposed" href="https://www.maginepro.com/wp-content/uploads/2018/01/cropped-favicon_maginepro_512x512-192x192.png">
   <link href="https://fonts.googleapis.com/css?family=${pageParams.fontName}" rel="stylesheet">
-  <link rel="stylesheet" id="challenge-css" href="/style.min.css?ver=${pageParams.npmPackageVersion}" type="text/css" media="all">
+  <link rel="stylesheet" id="challenge-css" href="/style.css?ver=${pageParams.npmPackageVersion}" type="text/css" media="all">
 </head>
 <body>
   <main class="js-app">
   Loading application version ${pageParams.npmPackageVersion}
   </main>
+  <script src="/app.js?ver=${pageParams.npmPackageVersion}"></script>
 </body>
 </html>`
