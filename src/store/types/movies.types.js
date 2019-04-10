@@ -1,3 +1,4 @@
 export default {
+  MOVIES_REQUEST: 'MOVIES_REQUEST',
   MOVIES_UPDATE: 'MOVIES_UPDATE'
 }

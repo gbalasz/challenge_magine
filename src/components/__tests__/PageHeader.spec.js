@@ -1,6 +1,6 @@
 /* global expect it */
 import React from 'react'
-import PageHeader from '../PageHeader.jsx'
+import { PageHeader } from '../'
 import { render, waitForElement } from 'react-testing-library'
 
 it('renders page header title', async () => {

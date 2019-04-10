@@ -1,25 +1,15 @@
 import React from 'react'
-import { MainNav, PageHeader } from './components'
-// import { connect } from 'react-redux'
-// import { stores } from './stores'
+import { Route, Switch, Redirect } from 'react-router-dom'
+import { DashboardView, MovieView } from './views'
 
-class App extends React.Component {
-  render () {
-    return <div className="wrapper">
-      <PageHeader title="Gabi Balasz - Challenge for Magine" />
-      <section className="container">
-        <MainNav />
-        {this.renderNavigation()}
-      </section>
-      <footer></footer>
-    </div>
-  }
-
-  renderNavigation () {
-    return <nav>
-      <a href="javascript:void(0);">Link</a>
-    </nav>
-  }
+export const App = () => {
+  return (
+    <Switch>
+      <Route exact path="/home" component={ DashboardView } />
+      <Route exact path="/">
+        <Redirect to="/home" />
+      </Route>
+      <Route exact path="/movie/:idMovie" component={ MovieView } />
+    </Switch>
+  )
 }
-
-export default App

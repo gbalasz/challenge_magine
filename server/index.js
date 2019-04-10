@@ -12,6 +12,8 @@ const staticFiles = [
 ]
 
 app.get('/', middlewares.htmlPage())
+app.get('/home', middlewares.htmlPage())
+app.get('/movies/:id', middlewares.htmlPage())
 app.use('/graphql', middlewares.graphql())
 
 staticFiles.forEach((file) => {
