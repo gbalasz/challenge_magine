@@ -1,36 +1,34 @@
-import { store } from '../'
 import { moviesTypes } from '../types'
 
-// hoisting export
+const moviesQuery = `{
+  movies {
+    id
+    name
+    manifest
+  }
+}`
+
 export default {
   load
 }
 
 function load () {
   return async dispatch => {
+    dispatch({ type: moviesTypes.MOVIES_REQUEST })
+
     try {
-      let response = await fetch('/graphql', {
+      const response = await fetch('/graphql', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: JSON.stringify({ query: `{
-  movies {
-    id
-    name
-    manifest
-  }
-}` })
+        body: JSON.stringify({ query: moviesQuery })
       })
-      // .then(r => r.json())
-      // .then(data => console.log('data returned:', data))
 
       const responseData = await response.json()
 
-      console.log(responseData)
-
-      store.dispatch(moviesLoaded(responseData.data.movies))
+      dispatch(moviesLoaded(responseData.data.movies))
     } catch (e) {
       console.log(e)
     }
@@ -38,5 +36,6 @@ function load () {
 }
 
 function moviesLoaded (movies) {
+  console.log('update')
   return { type: moviesTypes.MOVIES_UPDATE, movies }
 }

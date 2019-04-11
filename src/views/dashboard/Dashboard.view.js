@@ -5,8 +5,8 @@ export default props => (
   <div className="wrapper">
     <PageHeader title="Gabi Balasz - Challenge for Magine" />
     <section className="container">
-      <MainNav />
+      <MainNav type="vertical" />
     </section>
-    <footer>2019</footer>
+    <footer className="u-text--center">Please select a movie</footer>
   </div>
 )
