@@ -16,6 +16,7 @@ module.exports = (pageParams) => `<!DOCTYPE html>
   <link rel="apple-touch-icon-precomposed" href="https://www.maginepro.com/wp-content/uploads/2018/01/cropped-favicon_maginepro_512x512-192x192.png">
   <link href="https://fonts.googleapis.com/css?family=${pageParams.fontName}" rel="stylesheet">
   <link rel="stylesheet" id="challenge-css" href="/style.css?ver=${pageParams.npmPackageVersion}" type="text/css" media="all">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/2.4.7/shaka-player.compiled.debug.js"></script>
 </head>
 <body>
   <main id="App">

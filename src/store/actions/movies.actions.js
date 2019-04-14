@@ -1,4 +1,5 @@
 import { moviesTypes } from '../types'
+import * as showActions from './show.actions'
 
 const moviesQuery = `{
   movies {
@@ -8,11 +9,7 @@ const moviesQuery = `{
   }
 }`
 
-export default {
-  load
-}
-
-function load () {
+export const load = () => {
   return async dispatch => {
     dispatch({ type: moviesTypes.MOVIES_REQUEST })
 
@@ -35,7 +32,15 @@ function load () {
   }
 }
 
+export const select = id => {
+  return showActions.selectMovie(id)
+}
+
 function moviesLoaded (movies) {
-  console.log('update')
   return { type: moviesTypes.MOVIES_UPDATE, movies }
+}
+
+export default {
+  load,
+  select
 }

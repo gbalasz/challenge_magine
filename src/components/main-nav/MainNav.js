@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import actions from '../../store/actions'
 
 const componentClass = 'c-main-nav'
-class MainNav extends React.Component {
+class MainNavComponent extends React.Component {
   render () {
     let componentClassName = componentClass
 
@@ -29,7 +29,7 @@ class MainNav extends React.Component {
     }
 
     return <li className="c-main-nav__item" key={movie.id}>
-      <Link to={`/movie/${movie.id}`}>{ movie.name }</Link>
+      <Link to={`/movie/${movie.id}`} id={movie.id} onClick={() => { this.props.selectMovie(movie.id) }}>{ movie.name }</Link>
     </li>
   }
 
@@ -44,12 +44,6 @@ class MainNav extends React.Component {
       <span className="c-main-nav__label">{ movie.name }</span>
     </li>
   }
-
-  componentDidMount () {
-    if (this.props.movies.list === null) {
-      this.props.loadMovies()
-    }
-  }
 }
 
 const mapStateToProps = (state) => {
@@ -63,10 +57,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   const moviesActions = actions.moviesActions
   return {
-    loadMovies: () => dispatch(moviesActions.load())
+    loadMovies: () => dispatch(moviesActions.load()),
+    selectMovie: (id) => dispatch(moviesActions.select(id))
   }
 }
 
-const connectedMainNav = connect(mapStateToProps, mapDispatchToProps)(MainNav)
-
-export default connectedMainNav
+export const MainNav = connect(mapStateToProps, mapDispatchToProps)(MainNavComponent)

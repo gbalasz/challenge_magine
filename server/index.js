@@ -13,8 +13,8 @@ const staticFiles = [
 
 app.get('/', middlewares.htmlPage())
 app.get('/home', middlewares.htmlPage())
-app.get('/movies/:id', middlewares.htmlPage())
 app.use('/graphql', middlewares.graphql())
+app.get('/movie/:id', (req, res) => res.redirect('/home'))
 
 staticFiles.forEach((file) => {
   app.get(`/${file}`, (req, res) => {

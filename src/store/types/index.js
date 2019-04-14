@@ -1,5 +1,9 @@
-import moviesTypes from './movies.types'
+export * from './movies.types'
+export * from './show.types'
 
-export {
-  moviesTypes
-}
+
+// import moviesTypes from './movies.types'
+//
+// export {
+//   moviesTypes
+// }

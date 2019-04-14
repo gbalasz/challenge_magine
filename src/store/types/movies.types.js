@@ -1,4 +1,4 @@
-export default {
+export const moviesTypes = {
   MOVIES_REQUEST: 'MOVIES_REQUEST',
   MOVIES_UPDATE: 'MOVIES_UPDATE'
 }

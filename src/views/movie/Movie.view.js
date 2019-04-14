@@ -1,24 +1,34 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { MainNav, PageHeader } from '../../components'
+import { MainNav, PageHeader, Stage } from '../../components'
 
-const MovieView = props => {
-  console.log(props)
-  const currentMovie = props.movies.list.find(m => m.id === props.match.params.idMovie)
+class MovieView extends React.Component {
+  render () {
+    const currentMovie = this.props.movies.list.find(m => m.id === this.props.match.params.idMovie)
 
-  return (<div className="wrapper">
-    <PageHeader title={currentMovie.name} />
-    <footer>
-      <MainNav type="horizontal" active={currentMovie.id}/>
-    </footer>
-  </div>)
+    return (<div className="wrapper">
+      <PageHeader title={currentMovie.name} />
+
+      <Stage />
+
+      <footer>
+        <MainNav type="horizontal" active={currentMovie.id}/>
+      </footer>
+    </div>)
+  }
+
+  // componentDidMount () {
+  //   const currentMovie = this.props.movies.list.find(m => m.id === this.props.match.params.idMovie)
+  //   this.props.getMovieMetadata(this.props)
+  // }
 }
 
 const mapStateToProps = (state) => {
-  const { movies } = state
+  const { movies, show } = state
 
   return {
-    movies
+    movies,
+    show
   }
 }
 
