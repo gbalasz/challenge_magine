@@ -1,14 +1,16 @@
-/* global expect it */
+/* global describe expect it */
 import React from 'react'
 import { PageHeader } from '../'
 import { render, waitForElement } from 'react-testing-library'
 
-it('renders page header title', async () => {
-  const TITLE = 'Magine'
-  const { getByTestId, getByText } = render(<PageHeader title={ TITLE } />)
+describe('Test PageHeader component', () => {
+  it('renders page header title', async () => {
+    const TITLE = 'Magine'
+    const { getByTestId, getByText } = render(<PageHeader title={ TITLE } />)
 
-  expect(getByTestId('page-header-title').textContent).toBe(TITLE)
-  await waitForElement(() => {
-    return getByText(/Magine/i)
+    expect(getByTestId('page-header-title').textContent).toBe(TITLE)
+    await waitForElement(() => {
+      return getByText(/Magine/i)
+    })
   })
 })
